@@ -5,7 +5,6 @@ void main() {
   runApp(const DC_Robot());
 }
 
-// ignore: camel_case_typessss
 class DC_Robot extends StatelessWidget {
   const DC_Robot({super.key});
 

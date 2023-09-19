@@ -1,5 +1,5 @@
 import 'package:DC_Robot/screans/dc_queue_screen.dart';
-import 'package:DC_Robot/screans/home_screen.dart';
+import 'package:DC_Robot/screans/patient_screen2.dart';
 import 'package:flutter/material.dart';
 import './var.dart';
 

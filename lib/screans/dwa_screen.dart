@@ -1,7 +1,6 @@
-// ignore_for_file: use_build_context_synchronously
 
 import 'dart:convert';
-import 'package:DC_Robot/screans/rosheta.dart';
+import 'package:DC_Robot/screans/Rosheta_doc.dart';
 import 'package:flutter/material.dart';
 import '../var.dart';
 import 'header_screen.dart';

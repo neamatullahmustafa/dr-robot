@@ -7,24 +7,23 @@ import 'package:http/http.dart' as http;
 
 class PatientQueueScreen extends StatefulWidget {
   final String api;
-  const PatientQueueScreen({super.key, required this.api});
+  final String scr;
+  const PatientQueueScreen({super.key, required this.api, required this.scr});
 
   @override
   State<PatientQueueScreen> createState() => _PatientQueueScreenState();
 }
 
 class _PatientQueueScreenState extends State<PatientQueueScreen> {
- 
   List patients = [];
   Future getpatients() async {
     var url = Uri.parse(widget.api);
     var response = await http.get(url);
     var responsebody = jsonDecode(response.body);
     setState(() {
-    
       patients.addAll(responsebody);
-    
-       print(patients);
+
+      print(patients);
     });
   }
 
@@ -51,7 +50,7 @@ class _PatientQueueScreenState extends State<PatientQueueScreen> {
                   final patientName = patient['fname'];
                   final patientGender = patient['gender'];
                   return patientCard('$patientName', '$patientGender',
-                      'images/pat.png', '$patientGender', context);
+                      'images/pat.png', '$patientGender', context, widget.scr);
                 },
 
                 //  patientCard( 'نعمه الله', 'متصل', 'images/pat.png', 'استشاره', context),

@@ -6,8 +6,6 @@ import '../var.dart';
 
 import 'header_screen.dart';
 
-//import '../view/Calculate.dart';
-
 class SympotomScreen extends StatefulWidget {
   const SympotomScreen({super.key});
 

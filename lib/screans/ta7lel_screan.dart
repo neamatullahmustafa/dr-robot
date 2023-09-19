@@ -1,4 +1,4 @@
-import 'package:DC_Robot/screans/rosheta.dart';
+import 'package:DC_Robot/screans/Rosheta_doc.dart';
 import 'package:flutter/material.dart';
 import '../var.dart';
 import 'header_screen.dart';
@@ -158,7 +158,7 @@ class _Ta7lelState extends State<Ta7lel> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const Rosheta(),
+                                builder: (context) => const RoshetaWrite(),
                               ));
                         },
                         child: Center(

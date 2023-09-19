@@ -1,4 +1,3 @@
-// ignore_for_file: use_build_context_synchronously
 
 import 'package:DC_Robot/screans/patient_screen2.dart';
 import 'package:flutter/material.dart';
@@ -99,7 +98,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     } else {
       // Request failed, show error snackbar
       _showErrorSnackbar(
-          'Request failed with status code ${response.statusCode}.');
+          'لم يتم الحجز يرجى مراجعه البيانات و المحاوله مره اخرى');
     }
   }
 

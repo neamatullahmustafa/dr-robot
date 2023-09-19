@@ -116,7 +116,7 @@ class _LoginState extends State<Login> {
                   OutlineInputBorder(borderSide: BorderSide(color: globals.b)),
               prefixIcon: Icon(
                 Icons.email,
-                color: globals.b,
+                color: globals.gb,
               ),
               border:
                   OutlineInputBorder(borderSide: BorderSide(color: globals.b)),
