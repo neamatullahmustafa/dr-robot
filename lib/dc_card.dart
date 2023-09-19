@@ -1,7 +1,7 @@
-import 'package:DC_Robot/screans/dc_queue_screen.dart';
-import 'package:DC_Robot/screans/patient_screen2.dart';
+import 'package:DC_Robot/patient/dc_queue_screen.dart';
+import 'package:DC_Robot/patient/patient_screen2.dart';
 import 'package:flutter/material.dart';
-import './var.dart';
+import 'var.dart';
 
 Widget dcCard(String name, String gender, String pec, String price, String time,
     String rate, String api2, context) {
@@ -9,7 +9,7 @@ Widget dcCard(String name, String gender, String pec, String price, String time,
     decoration: BoxDecoration(
         color: globals.w,
         borderRadius: BorderRadius.circular(10),
-        boxShadow: const [BoxShadow(blurRadius: 5)]),
+        boxShadow: [BoxShadow(blurRadius: 5,color:globals.b )]),
     padding: const EdgeInsets.symmetric(
       vertical: 10,
       horizontal: 10,
@@ -22,11 +22,11 @@ Widget dcCard(String name, String gender, String pec, String price, String time,
             child: Column(
               children: [
                 Text(
-                  name,
+                 'الإسم / $name',
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
-                    color: globals.b,
+                    color: globals.gb,
                   ),
                 ),
                 Row(
@@ -44,17 +44,17 @@ Widget dcCard(String name, String gender, String pec, String price, String time,
                         style: TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
-                          color: globals.b,
+                          color: globals.gb,
                         ),
                       ),
                     ),
                     Expanded(
                       flex: 6,
                       child: Text(
-                        ' تقييم : $rate',
+                        ' التقييم : $rate',
                         style: TextStyle(
                           fontSize: 15,
-                          color: globals.b,
+                          color: globals.gb,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -77,9 +77,10 @@ Widget dcCard(String name, String gender, String pec, String price, String time,
                             showDialog(
                                 context: context,
                                 builder: (context) => AlertDialog(
-                                      title: const Text("حجز"),
+                                  backgroundColor: globals.w,
+                                      title:  Text("حجز",style: TextStyle(color: globals.gb),),
                                       content:
-                                          const Text("هل تريد تأكيد الحجز؟"),
+                                           Text("هل تريد تأكيد الحجز؟",style: TextStyle(color: globals.gb),),
                                       actions: [
                                         TextButton(
                                             onPressed: () {
@@ -87,10 +88,10 @@ Widget dcCard(String name, String gender, String pec, String price, String time,
                                                 context,
                                                 MaterialPageRoute(
                                                     builder: (context) =>
-                                                        const HomePage()),
+                                                        const PatientScreen2()),
                                               );
                                             },
-                                            child: const Text("تأكيد")),
+                                            child:  Text("تأكيد",style: TextStyle(color: globals.gb),)),
                                         TextButton(
                                             onPressed: () {
                                               Navigator.push(
@@ -102,7 +103,7 @@ Widget dcCard(String name, String gender, String pec, String price, String time,
                                                         )),
                                               );
                                             },
-                                            child: const Text("غلق"))
+                                            child:  Text("غلق",style: TextStyle(color: globals.gb),))
                                       ],
                                     ));
                           },
@@ -138,7 +139,7 @@ Widget dcCard(String name, String gender, String pec, String price, String time,
                     )),
               ),
               Text(
-                "متاح من الساعه $time",
+                'متاح من الساعة $time',
                 style: TextStyle(
                   fontSize: 10,
                   fontWeight: FontWeight.bold,
@@ -150,7 +151,7 @@ Widget dcCard(String name, String gender, String pec, String price, String time,
                 style: TextStyle(
                   fontSize: 10,
                   fontWeight: FontWeight.bold,
-                  color: globals.b,
+                  color: globals.gb,
                 ),
               ),
             ],

@@ -7,6 +7,6 @@ mixin globals {
       b = Colors.black,
       r = const Color.fromARGB(255, 89, 186, 174),
       gb = Colors.grey[800],
-      gw = Colors.grey[500];
+      gw = Colors.grey[200];
   String titlelogin = "s";
 }

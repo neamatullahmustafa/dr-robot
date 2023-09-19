@@ -1,4 +1,4 @@
-import 'package:DC_Robot/screans/dc_queue_screen.dart';
+import 'package:DC_Robot/patient/dc_queue_screen.dart';
 import 'package:flutter/material.dart';
 import './var.dart';
 import 'box_class.dart';
@@ -26,14 +26,14 @@ Widget box2(String address, context, String scr, String api1) {
             decoration: BoxDecoration(
                 color: globals.w,
                 borderRadius: BorderRadius.circular(30),
-                boxShadow: const [BoxShadow(blurRadius: 5)]),
+                boxShadow:  [BoxShadow(blurRadius: 5,color: globals.b)]),
             child: Center(
               child: Text(
                 address,
                 style: TextStyle(
-                  fontSize: 25,
+                  fontSize: 20,
                   fontWeight: FontWeight.bold,
-                  color: globals.b,
+                  color: globals.gb,
                 ),
               ),
             ),

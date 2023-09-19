@@ -53,11 +53,11 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     Icon(
                       Icons.language,
-                      color: globals.b,
+                      color: globals.gb,
                     ),
                     Text(
                       "   اللغة",
-                      style: TextStyle(color: globals.b),
+                      style: TextStyle(color: globals.gb),
                     ),
                   ],
                 ),
@@ -69,10 +69,10 @@ class _HomePageState extends State<HomePage> {
                     children: [
                       Icon(
                         Icons.color_lens,
-                        color: globals.b,
+                        color: globals.gb,
                       ),
                       Text("   مظهر داكن                          ",
-                          style: TextStyle(color: globals.b)),
+                          style: TextStyle(color: globals.gb)),
                       Switch(
                           value: s,
                           onChanged: (val) {
@@ -84,6 +84,12 @@ class _HomePageState extends State<HomePage> {
                               globals.w = globals.w == Colors.white
                                   ? Colors.black
                                   : Colors.white;
+                                   globals.gb = globals.gb ==  Colors.grey[800]
+                                  ? Colors.grey[300]
+                                  :  Colors.grey[800];
+                              globals.gw = globals.gw == Colors.grey[300]
+                                  ?  Colors.grey[800]
+                                  : Colors.grey[300];
                             });
                           })
                     ],
@@ -100,7 +106,7 @@ class _HomePageState extends State<HomePage> {
           children: <Widget>[
             box(
               "images/fracture.png",
-              'مريض',
+              'المريض',
               context,
               'p',
             ),
@@ -120,7 +126,7 @@ class _HomePageState extends State<HomePage> {
                 Container(width: 50, color: globals.w),
                 box(
                   "images/nurse.png",
-                  'ممرضة',
+                  'الممرضة',
                   context,
                   'n',
                 ),

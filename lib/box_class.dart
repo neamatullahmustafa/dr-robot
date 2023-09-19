@@ -1,34 +1,34 @@
-import 'package:DC_Robot/screans/specialest_screen.dart';
-import 'package:DC_Robot/screans/sympotom_screen.dart';
+import 'package:DC_Robot/patient/specialest_screen.dart';
+import 'package:DC_Robot/patient/sympotom_screen.dart';
 import 'package:flutter/material.dart';
 import './screans/login.dart';
-import 'screans/register_screen.dart';
+import 'patient/register_screen.dart';
 import './var.dart';
-import './screans/patient_screen1.dart';
+import 'patient/patient_screen1.dart';
 
 void selectScrean(BuildContext screan, String scr) {
   Widget sscr = const Login(
-    thetitle: 'login',
-    sccr: " ns",
+    thetitle: '',
+    sccr: "",
     api: '',
   );
   if (scr == 'p') {
     sscr = const PatientScreen1();
   } else if (scr == 'd') {
     sscr = const Login(
-      thetitle: 'طبيب',
+      thetitle: 'الطبيب',
       sccr: 'ds',
       api: 'https://drrobot-production.up.railway.app/api/doctors/login',
     );
   } else if (scr == 'n') {
     sscr = const Login(
-      thetitle: 'ممرضه',
+      thetitle: 'الممرضة',
       sccr: 'ns',
       api: 'https://drrobot-production.up.railway.app/api/nurses/login',
     );
   } else if (scr == 'pl') {
     sscr = const Login(
-      thetitle: 'مريض',
+      thetitle: 'المريض',
       sccr: 'ps',
       api: 'https://drrobot-production.up.railway.app/api/patients/login',
     );
@@ -78,7 +78,7 @@ Widget box(String photo, String address, context, String scr) {
             style: TextStyle(
               fontSize: 25,
               fontWeight: FontWeight.bold,
-              color: globals.b,
+              color: globals.gb,
             ),
           ),
         ),
